@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Ayu Muhafilah</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link href="assets/css/font-css2.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-mono fw-bold text-primary fs-6" href="#hero">
+                &lt;DevPortfolio /&gt;
+            </a>
+
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <button id="themeToggle" class="theme-toggle-btn font-mono" aria-label="Ganti Tema">
+                    <i id="themeIcon" class="bi bi-moon-stars-fill"></i>
+                    <span id="themeLabel">Dark</span>
+                </button>
+
+                <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="bi bi-list fs-3 text-primary"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end order-lg-2 me-lg-2" id="navbarNav">
+                <ul class="navbar-nav gap-1 font-mono py-2 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">01.About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">02.Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">03.Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">04.Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">05.Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#organization">06.Org</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">07.Certs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location">08.Location</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. IDENTITAS, NAMA, KONTAK, SNIPPET PYTHON DI ATAS DOWNLOAD CV & FOTO SETENGAH BADAN -->
+    <header id="hero" class="full-screen-section">
+        <div class="container">
+            <div class="soft-card p-3 p-sm-4 p-lg-5" style="background: var(--hero-gradient);">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="font-mono text-primary fw-semibold d-block mb-1 small">Hello World! Saya,</span>
+                        <h1 class="hero-title mb-1">Budi Santoso, S.Kom.</h1>
+                        <p class="font-mono text-muted mb-3" style="font-size: clamp(0.92rem, 1.4vw, 1.15rem);">
+                            Full-Stack Developer &amp; Mobile Engineer
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2 gap-sm-3 mb-3 text-muted small">
+                            <span><i class="bi bi-envelope-fill text-primary me-1"></i>budi.dev@email.com</span>
+                            <span><i class="bi bi-whatsapp text-primary me-1"></i>+62 812-3456-7890</span>
+                            <span><i class="bi bi-github text-primary me-1"></i>github.com/budidev</span>
+                            <span><i class="bi bi-linkedin text-primary me-1"></i>linkedin.com/in/budidev</span>
+                        </div>
+
+                        <!-- Blok Kode Python Persis di Atas Tombol Download CV -->
+                        <div class="hero-code-snippet font-mono small mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <div class="d-flex gap-1">
+                                    <span class="badge rounded-circle bg-danger p-1"> </span>
+                                    <span class="badge rounded-circle bg-warning p-1"> </span>
+                                    <span class="badge rounded-circle bg-success p-1"> </span>
+                                </div>
+                                <span class="text-secondary" style="font-size: 0.72rem;">profile.py</span>
+                            </div>
+                            <span class="text-info">developer</span> = {
+                            <span class="text-warning">"stack"</span>: <span class="text-warning">"Web &amp; Android"</span>,
+                            <span class="text-warning">"coffee"</span>: <span class="text-success">True</span>,
+                            <span class="text-warning">"ready"</span>: <span class="text-success">True</span>
+                            }
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 gap-sm-3">
+                            <a href="path/to/CV_Budi_Santoso.pdf" download class="btn btn-soft-primary">
+                                <i class="bi bi-file-earmark-arrow-down-fill me-2"></i>Download CV
+                            </a>
+                            <a href="#location" class="btn btn-soft-outline">
+                                <i class="bi bi-send-fill me-2"></i>Hubungi Saya
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 text-center">
+                        <div class="hero-photo-wrapper">
+                            <div class="hero-photo-bg"></div>
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85"
+                                 alt="Foto Setengah Badan Programmer"
+                                 class="hero-half-body">
+                            <div class="hero-floating-tag font-mono small text-start">
+                                <span class="text-success fw-bold"><i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i>Available for Hire</span>
+                                <span class="d-block text-muted" style="font-size: 0.72rem;">&lt;Code /&gt; &bull; Build &bull; Deploy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. ABOUT ME + FOTO -->
+    <section id="about" class="full-screen-section section-alt">
+        <div class="container">
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-md-5 text-center">
+                    <div class="profile-frame mx-auto" style="max-width: 340px;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85"
+                             alt="Foto Profil About"
+                             class="img-fluid w-100"
+                             style="max-height: 360px; object-fit: cover; object-position: top center;">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <span class="section-badge font-mono">// ABOUT ME</span>
+                    <h2 class="section-title mb-2">Mengubah Logika Menjadi Solusi Digital yang Nyata</h2>
+                    <p class="text-muted lh-base mb-2">
+                        Saya adalah seorang Software Developer yang memiliki ketertarikan mendalam pada pengembangan aplikasi web modern dan sistem berbasis kecerdasan buatan. Berpengalaman membangun arsitektur aplikasi yang bersih, terukur, dan ramah pengguna.
+                    </p>
+                    <p class="text-muted lh-base mb-3">
+                        Terbiasa bekerja dengan pendekatan <em>problem-solving</em>, menyukai tantangan baru, dan selalu antusias mengeksplorasi teknologi terbaru untuk menciptakan produk digital yang berdampak.
+                    </p>
+                    <div class="row g-3 font-mono small">
+                        <div class="col-6">
+                            <div class="p-3 soft-card">
+                                <span class="text-muted d-block">Fokus Utama</span>
+                                <strong class="text-primary">Web &amp; Mobile Dev</strong>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 soft-card">
+                                <span class="text-muted d-block">Ketersediaan</span>
+                                <strong class="text-success">Full-time / Freelance</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PENDIDIKAN (HANYA SMK & KULIAH + GAMBAR INSTANSI + HIGHLIGHT SKRIPSI, IPK, JURUSAN) -->
+    <section id="education" class="full-screen-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge font-mono">// EDUCATION</span>
+                <h2 class="section-title">Riwayat Pendidikan</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-7">
+                    <div class="soft-card p-4 h-100" style="border: 2px solid var(--accent-blue); background-color: var(--edu-highlight-card);">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=300&q=80"
+                                 alt="Gedung Universitas" class="edu-instansi-img">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap gap-1">
+                                    <span class="badge bg-primary">Perguruan Tinggi</span>
+                                    <span class="font-mono badge px-2 py-1" style="background-color: var(--bg-primary); color: var(--text-main); border: 1px solid var(--border-soft);">2020 - 2024</span>
+                                </div>
+                                <h4 class="fw-bold mt-1 mb-0 fs-5">Universitas Teknologi Nusantara</h4>
+                                <p class="text-primary fw-semibold mb-0 small">S1 - Teknik Informatika</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-3" style="background-color: var(--accent-light);">
+                            <div class="row g-2 mb-2">
+                                <div class="col-sm-7">
+                                    <small class="text-muted d-block">Jurusan / Program Studi</small>
+                                    <strong class="text-dark">Teknik Informatika</strong>
+                                </div>
+                                <div class="col-sm-5">
+                                    <small class="text-muted d-block">Indeks Prestasi (IPK)</small>
+                                    <span class="badge bg-success font-mono">3.89 / 4.00</span>
+                                </div>
+                            </div>
+                            <hr class="my-2 opacity-25">
+                            <div>
+                                <small class="text-muted d-block"><i class="bi bi-journal-code me-1"></i>Judul Skripsi:</small>
+                                <p class="fw-bold text-dark mb-0 mt-1 small">
+                                    "Implementasi Algoritma K-Means Clustering untuk Klasifikasi Tingkat Penguasaan Materi pada Aplikasi Pembelajaran Adaptif"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="soft-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=300&q=80"
+                                     alt="Gedung SMK" class="edu-instansi-img">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-1">
+                                        <span class="badge bg-secondary">SMK</span>
+                                        <span class="font-mono badge px-2 py-1" style="background-color: var(--bg-primary); color: var(--text-main); border: 1px solid var(--border-soft);">2017 - 2020</span>
+                                    </div>
+                                    <h4 class="fw-bold mt-1 mb-0 fs-5">SMK Negeri 1 Kota</h4>
+                                    <p class="text-primary fw-semibold mb-0 small">Rekayasa Perangkat Lunak (RPL)</p>
+                                </div>
+                            </div>
+                            <p class="text-muted small mt-2 lh-base">
+                                Mempelajari dasar-dasar pemrograman web, basis data relasional (MySQL), pemrograman berorientasi objek, serta manajemen jaringan dasar.
+                            </p>
+                        </div>
+                        <div class="font-mono small text-muted pt-3 border-top" style="border-color: var(--border-soft) !important;">
+                            <i class="bi bi-code-slash text-primary me-1"></i> Lulus dengan Predikat Sangat Baik
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PENGALAMAN KERJA (TEXT SAJA + CAROUSEL KE-2 SAMA) -->
+    <section id="experience" class="full-screen-section section-alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge font-mono">// WORK EXPERIENCE</span>
+                <h2 class="section-title">Pengalaman Kerja</h2>
+            </div>
+
+            <div id="workCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-3 g-md-4">
+                            <div class="col-md-6">
+                                <div class="soft-card p-4 h-100">
+                                    <span class="font-mono text-primary small">Jan 2024 - Sekarang</span>
+                                    <h4 class="fw-bold mt-1 mb-1 fs-5">Frontend Web Developer</h4>
+                                    <h6 class="text-muted fw-semibold mb-3 small">PT. Inovasi Digital Nusantara</h6>
+                                    <p class="text-muted mb-0 small lh-base">
+                                        Bertanggung jawab merancang dan mengembangkan antarmuka dashboard manajemen berbasis web yang responsif, mengoptimalkan kecepatan muat halaman hingga 40%, serta berkolaborasi dengan tim backend dalam integrasi RESTful API.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="soft-card p-4 h-100">
+                                    <span class="font-mono text-primary small">Jul 2023 - Des 2023</span>
+                                    <h4 class="fw-bold mt-1 mb-1 fs-5">Junior Full-Stack Developer</h4>
+                                    <h6 class="text-muted fw-semibold mb-3 small">CV. Solusi Teknologi Kreatif</h6>
+                                    <p class="text-muted mb-0 small lh-base">
+                                        Membangun sistem informasi akademik dan inventaris untuk klien UMKM, mengelola struktur database, serta melakukan pengujian fungsionalitas dan perbaikan bug sebelum tahap rilis produksi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-3 g-md-4">
+                            <div class="col-md-6">
+                                <div class="soft-card p-4 h-100">
+                                    <span class="font-mono text-primary small">Feb 2023 - Jun 2023</span>
+                                    <h4 class="fw-bold mt-1 mb-1 fs-5">Mobile Developer Intern</h4>
+                                    <h6 class="text-muted fw-semibold mb-3 small">Startup EduTech Indonesia</h6>
+                                    <p class="text-muted mb-0 small lh-base">
+                                        Mengembangkan fitur modul kuis interaktif pada aplikasi Android, mengimplementasikan penyimpanan data real-time menggunakan cloud database, dan memastikan tampilan UI konsisten di berbagai ukuran layar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="soft-card p-4 h-100">
+                                    <span class="font-mono text-primary small">2021 - 2022</span>
+                                    <h4 class="fw-bold mt-1 mb-1 fs-5">Freelance Web Programmer</h4>
+                                    <h6 class="text-muted fw-semibold mb-3 small">Self-Employed</h6>
+                                    <p class="text-muted mb-0 small lh-base">
+                                        Mengerjakan berbagai proyek landing page perusahaan, website portofolio, dan sistem kasir berbasis web sesuai kebutuhan spesifik klien dengan ketepatan waktu pengiriman.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-soft-outline btn-sm px-3" type="button" data-bs-target="#workCarousel" data-bs-slide="prev">
+                        <i class="bi bi-arrow-left me-1"></i> Sebelumnya
+                    </button>
+                    <button class="btn btn-soft-outline btn-sm px-3" type="button" data-bs-target="#workCarousel" data-bs-slide="next">
+                        Selanjutnya <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROJECT (2 BARIS X 3 KOLOM) -->
+    <section id="projects" class="full-screen-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge font-mono">// PORTFOLIO PROJECTS</span>
+                <h2 class="section-title mb-1">Kumpulan Proyek</h2>
+                <p class="text-muted small mb-3">Klik gambar untuk Zoom atau tekan tombol <strong>Info</strong> untuk penjelasan proyek.</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+                             alt="Project 1" onclick="openZoomModal(this.src, 'Sistem Monitoring Data & Analytics')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80', 'Sistem Monitoring Data & Analytics')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sistem Monitoring Data & Analytics', 'Aplikasi web dashboard interaktif untuk memvisualisasikan data penjualan dan performa bisnis secara real-time.', 'HTML5, Bootstrap 5, JS, Chart.js')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=700&q=80"
+                             alt="Project 2" onclick="openZoomModal(this.src, 'Aplikasi Pembelajaran Adaptif Mobile')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80', 'Aplikasi Pembelajaran Adaptif Mobile')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Aplikasi Pembelajaran Adaptif Mobile', 'Aplikasi Android yang mengelompokkan tingkat pemahaman siswa menggunakan algoritma K-Means clustering.', 'Kotlin, XML, Firebase Firestore')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80"
+                             alt="Project 3" onclick="openZoomModal(this.src, 'Platform E-Commerce & Kasir')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80', 'Platform E-Commerce & Kasir')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Platform E-Commerce & Kasir', 'Sistem toko online yang terhubung langsung dengan stok gudang dan kasir fisik serta payment gateway.', 'Laravel, MySQL, Bootstrap')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+                             alt="Project 4" onclick="openZoomModal(this.src, 'Sistem Informasi Akademik Kampus')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80', 'Sistem Informasi Akademik Kampus')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sistem Informasi Akademik Kampus', 'Portal terpadu untuk pengelolaan KRS, penilaian dosen, dan rekapitulasi presensi mahasiswa.', 'PHP, MySQL, Bootstrap 5')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80"
+                             alt="Project 5" onclick="openZoomModal(this.src, 'API Gateway & Auth Service')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80', 'API Gateway & Auth Service')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('API Gateway & Auth Service', 'Layanan backend terpusat untuk manajemen autentikasi JWT dan pembatasan rate-limit request.', 'Python, FastAPI, REST API')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=700&q=80"
+                             alt="Project 6" onclick="openZoomModal(this.src, 'Smart Inventory & QR Scanner')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80', 'Smart Inventory & QR Scanner')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Smart Inventory & QR Scanner', 'Aplikasi manajemen stok gudang dilengkapi pemindai QR/Barcode dan notifikasi stok menipis.', 'Kotlin, CameraX, Firebase')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SKILL (KOLOM 1 HARD SKILL, KOLOM 2 SOFT SKILL & CARD TOOLS) -->
+    <section id="skills" class="full-screen-section section-alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge font-mono">// TECH STACK &amp; ABILITIES</span>
+                <h2 class="section-title">Keahlian (Skills &amp; Tools)</h2>
+            </div>
+
+            <div class="row g-3 g-md-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="soft-card p-4 h-100">
+                        <h4 class="fw-bold mb-1 fs-5"><i class="bi bi-cpu-fill text-primary me-2"></i>Hard Skills (Technical)</h4>
+                        <p class="text-muted small mb-3">Bahasa pemrograman, framework, dan teknologi pengembangan perangkat lunak:</p>
+                        <div class="d-flex flex-wrap gap-2 font-mono">
+                            <span class="skill-tag"><i class="bi bi-filetype-py text-info"></i> Python</span>
+                            <span class="skill-tag"><i class="bi bi-filetype-html text-danger"></i> HTML5 &amp; CSS3</span>
+                            <span class="skill-tag"><i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap 5</span>
+                            <span class="skill-tag"><i class="bi bi-filetype-js text-warning"></i> JavaScript</span>
+                            <span class="skill-tag"><i class="bi bi-filetype-php text-info"></i> PHP / Laravel</span>
+                            <span class="skill-tag"><i class="bi bi-phone text-success"></i> Kotlin / Android</span>
+                            <span class="skill-tag"><i class="bi bi-database-fill text-warning"></i> MySQL &amp; Firebase</span>
+                            <span class="skill-tag"><i class="bi bi-diagram-3 text-info"></i> RESTful API</span>
+                            <span class="skill-tag"><i class="bi bi-bar-chart-steps text-success"></i> K-Means Clustering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-flex flex-column gap-3 gap-md-4">
+                    <div class="soft-card p-4 flex-fill">
+                        <h5 class="fw-bold mb-1 fs-6"><i class="bi bi-people-fill text-primary me-2"></i>Soft Skills</h5>
+                        <p class="text-muted small mb-3">Kemampuan interpersonal dan manajemen kerja:</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-tag"><i class="bi bi-lightbulb text-warning"></i> Problem Solving</span>
+                            <span class="skill-tag"><i class="bi bi-chat-dots text-primary"></i> Komunikasi Efektif</span>
+                            <span class="skill-tag"><i class="bi bi-diagram-2 text-success"></i> Kerja Sama Tim</span>
+                            <span class="skill-tag"><i class="bi bi-clock-history text-info"></i> Manajemen Waktu</span>
+                            <span class="skill-tag"><i class="bi bi-search text-primary"></i> Analytical Thinking</span>
+                        </div>
+                    </div>
+
+                    <div class="soft-card p-4 flex-fill">
+                        <h5 class="fw-bold mb-1 fs-6"><i class="bi bi-wrench-adjustable-circle-fill text-primary me-2"></i>Development Tools</h5>
+                        <p class="text-muted small mb-3">Perangkat lunak pendukung coding, desain, dan kolaborasi:</p>
+                        <div class="d-flex flex-wrap gap-2 font-mono">
+                            <span class="skill-tag"><i class="bi bi-code-square text-primary"></i> VS Code</span>
+                            <span class="skill-tag"><i class="bi bi-android2 text-success"></i> Android Studio</span>
+                            <span class="skill-tag"><i class="bi bi-git text-danger"></i> Git &amp; GitHub</span>
+                            <span class="skill-tag"><i class="bi bi-vector-pen text-info"></i> Figma</span>
+                            <span class="skill-tag"><i class="bi bi-send-check text-warning"></i> Postman</span>
+                            <span class="skill-tag"><i class="bi bi-cloud-arrow-up text-primary"></i> Cloudinary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PENGALAMAN ORGANISASI (CUKUP 1 CARD CAROUSEL) -->
+    <section id="organization" class="full-screen-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge font-mono">// ORGANIZATIONS</span>
+                <h2 class="section-title">Pengalaman Organisasi</h2>
+            </div>
+
+            <div id="orgCarousel" class="carousel slide mx-auto" style="max-width: 960px;" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="soft-card p-4">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6">
+                                    <span class="font-mono text-primary small">2022 - 2023</span>
+                                    <h3 class="fw-bold mt-1 fs-4">Ketua Divisi Riset &amp; Teknologi</h3>
+                                    <h6 class="text-muted fw-semibold mb-2 small">Himpunan Mahasiswa Teknik Informatika (HMTI)</h6>
+                                    <p class="text-muted small lh-base mb-2">
+                                        Memimpin tim yang terdiri dari 15 anggota dalam menyelenggarakan pelatihan pemrograman rutin, webinar teknologi, serta kompetisi hackathon tingkat kampus.
+                                    </p>
+                                    <ul class="text-muted small ps-3 mb-0">
+                                        <li>Menginisiasi kelas belajar mingguan Web &amp; Mobile Development.</li>
+                                        <li>Meningkatkan partisipasi peserta seminar IT sebesar 60%.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row g-2">
+                                        <div class="col-12">
+                                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=700&q=80"
+                                                 class="org-img" style="height: 155px;" alt="Dokumentasi Org 1">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=450&q=80"
+                                                 class="org-img" style="height: 110px;" alt="Dokumentasi Org 2">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=450&q=80"
+                                                 class="org-img" style="height: 110px;" alt="Dokumentasi Org 3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="soft-card p-4">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6">
+                                    <span class="font-mono text-primary small">2021 - 2022</span>
+                                    <h3 class="fw-bold mt-1 fs-4">Koordinator Acara &amp; Dokumentasi</h3>
+                                    <h6 class="text-muted fw-semibold mb-2 small">Komunitas Open Source Kampus</h6>
+                                    <p class="text-muted small lh-base mb-2">
+                                        Mengelola publikasi digital komunitas, mendokumentasikan kegiatan pengabdian masyarakat berupa pelatihan literasi digital untuk pelajar SMK, serta mengelola repositori proyek terbuka.
+                                    </p>
+                                    <ul class="text-muted small ps-3 mb-0">
+                                        <li>Menyelenggarakan workshop pengenalan Git &amp; Open Source.</li>
+                                        <li>Mengkoordinasikan tim dokumentasi di 8 acara tahunan.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=450&q=80"
+                                                 class="org-img" style="height: 273px;" alt="Dokumentasi Komunitas 1">
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=450&q=80"
+                                                 class="org-img" style="height: 273px;" alt="Dokumentasi Komunitas 2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <button class="btn btn-soft-outline btn-sm px-3" type="button" data-bs-target="#orgCarousel" data-bs-slide="prev">
+                        <i class="bi bi-arrow-left me-1"></i> Sebelumnya
+                    </button>
+                    <button class="btn btn-soft-outline btn-sm px-3" type="button" data-bs-target="#orgCarousel" data-bs-slide="next">
+                        Selanjutnya <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SERTIFIKAT (2 BARIS X 3 KOLOM DESAIN FIGURA) -->
+    <section id="certificates" class="full-screen-section section-alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge font-mono">// CERTIFICATIONS</span>
+                <h2 class="section-title mb-1">Sertifikat &amp; Lisensi</h2>
+                <p class="text-muted small mb-3">Klik figura sertifikat untuk Zoom atau tekan tombol <strong>Info</strong> untuk detail kredensial.</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="figura-frame">
+                        <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=700&q=80"
+                             alt="Sertifikat 1" onclick="openZoomModal(this.src, 'Sertifikat Full-Stack Web Developer')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Full-Stack Web Developer')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sertifikat Full-Stack Web Developer', 'Diterbitkan oleh Dicoding Indonesia / BNSP tahun 2024 atas kelulusan proyek aplikasi web responsif.', 'ID Kredensial: CERT-2024-98210')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="figura-frame">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=700&q=80"
+                             alt="Sertifikat 2" onclick="openZoomModal(this.src, 'Sertifikat Associate Android Developer')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Associate Android Developer')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sertifikat Associate Android Developer', 'Sertifikasi pengembangan aplikasi mobile native menggunakan Kotlin dan database cloud.', 'ID Kredensial: AND-2023-44129')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="figura-frame">
+                        <img src="https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=700&q=80"
+                             alt="Sertifikat 3" onclick="openZoomModal(this.src, 'Sertifikat Cloud Computing Essentials')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Cloud Computing Essentials')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sertifikat Cloud Computing Essentials', 'Sertifikasi arsitektur cloud, deployment aplikasi web, dan keamanan server.', 'ID Kredensial: CLD-2024-77312')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="figura-frame">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=700&q=80"
+                             alt="Sertifikat 4" onclick="openZoomModal(this.src, 'Sertifikat Database Design & SQL')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Database Design & SQL')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sertifikat Database Design & SQL', 'Perancangan skema database relasional, normalisasi data, dan optimasi query.', 'ID Kredensial: SQL-2023-11904')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="figura-frame">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80"
+                             alt="Sertifikat 5" onclick="openZoomModal(this.src, 'Sertifikat UI/UX Design Fundamentals')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80', 'Sertifikat UI/UX Design Fundamentals')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sertifikat UI/UX Design Fundamentals', 'Kelas desain antarmuka pengguna, wireframing, dan prototyping menggunakan Figma.', 'ID Kredensial: UIX-2023-55081')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="figura-frame">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+                             alt="Sertifikat 6" onclick="openZoomModal(this.src, 'Sertifikat Dasar Machine Learning')">
+                        <div class="gallery-actions">
+                            <button class="btn btn-light btn-sm shadow py-1 px-2" onclick="openZoomModal('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80', 'Sertifikat Dasar Machine Learning')"><i class="bi bi-zoom-in"></i></button>
+                            <button class="btn btn-soft-primary btn-sm shadow py-1 px-2" onclick="openInfoModal('Sertifikat Dasar Machine Learning', 'Penguasaan algoritma clustering K-Means dan klasifikasi data.', 'ID Kredensial: ML-2024-30291')"><i class="bi bi-info-circle-fill me-1"></i>Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MAPS ALAMAT + FOOTER DENGAN TOMBOL GULIR KE ATAS -->
+    <section id="location" class="full-screen-section flex-column justify-content-between pb-0">
+        <div class="container my-auto py-3">
+            <div class="text-center">
+                <span class="section-badge font-mono">// LOCATION</span>
+                <h2 class="section-title">Alamat &amp; Domisili</h2>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-4">
+                    <div class="soft-card p-4">
+                        <h5 class="fw-bold mb-2 fs-6"><i class="bi bi-geo-alt-fill text-primary me-2"></i>Domisili Saat Ini</h5>
+                        <p class="text-muted small mb-3">
+                            Jl. Merdeka Raya No. 45, Kecamatan Kuningan, Kabupaten Kuningan, Jawa Barat 45511, Indonesia.
+                        </p>
+                        <hr class="my-2">
+                        <p class="small text-muted mb-2"><strong>Status Kerja:</strong></p>
+                        <span class="badge px-3 py-2" style="background-color: var(--accent-light); color: var(--accent-blue); border: 1px solid var(--accent-blue);">
+                            Siap On-Site maupun Remote
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63363.93179726539!2d108.44522455!3d-6.9803025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f142e8f7b8b3b%3A0x401e8f1fc28c8e0!2sKuningan%2C%20Kabupaten%20Kuningan%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            width="100%"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="w-100 py-3 border-top mt-auto" style="background-color: var(--bg-secondary); border-color: var(--border-soft) !important;">
+            <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+                <p class="font-mono small text-muted mb-0">
+                    Built with <i class="bi bi-heart-fill text-danger"></i> &amp; Bootstrap 5 &bull; &copy; 2026 Budi Santoso
+                </p>
+                <a href="#hero" class="scroll-top-btn font-mono" aria-label="Gulir ke atas">
+                    <i class="bi bi-arrow-up-circle-fill"></i> Ke Atas
+                </a>
+            </div>
+        </footer>
+    </section>
+
+    <!-- MODAL 1: ZOOM GAMBAR -->
+    <div class="modal fade" id="zoomModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0 text-white">
+                    <h6 class="modal-title font-mono text-white" id="zoomModalTitle">Preview</h6>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-2">
+                    <img id="zoomModalImage" src="" class="img-fluid rounded" style="max-height: 82vh;" alt="Zoomed Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: INFO PENJELASAN -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content theme-modal rounded-4 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <span class="badge bg-primary font-mono">Detail Informasi</span>
+                    <button type="button" class="btn-close btn-close-adaptive" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <h4 class="fw-bold mb-2 fs-5" id="infoModalTitle">Judul</h4>
+                    <p class="text-muted small lh-base" id="infoModalDesc">Deskripsi lengkap...</p>
+                    <div class="p-3 rounded-3 mt-3 font-mono small" style="background-color: var(--bg-primary); color: var(--accent-blue); border: 1px solid var(--border-soft);">
+                        <i class="bi bi-tags-fill me-1"></i> <span id="infoModalMeta">Tech Stack / ID</span>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-soft-primary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const htmlEl = document.documentElement;
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeLabel = document.getElementById('themeLabel');
+
+        function applyTheme(theme) {
+            htmlEl.setAttribute('data-theme', theme);
+            localStorage.setItem('portfolio-theme', theme);
+
+            if (theme === 'dark') {
+                themeIcon.className = 'bi bi-sun-fill text-warning';
+                themeLabel.textContent = 'Light';
+            } else {
+                themeIcon.className = 'bi bi-moon-stars-fill';
+                themeLabel.textContent = 'Dark';
+            }
+        }
+
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+        applyTheme(savedTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlEl.getAttribute('data-theme');
+            const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(nextTheme);
+        });
+
+        function openZoomModal(imgSrc, title) {
+            document.getElementById('zoomModalImage').src = imgSrc;
+            document.getElementById('zoomModalTitle').textContent = title;
+            const zoomModal = new bootstrap.Modal(document.getElementById('zoomModal'));
+            zoomModal.show();
+        }
+
+        function openInfoModal(title, description, meta) {
+            document.getElementById('infoModalTitle').textContent = title;
+            document.getElementById('infoModalDesc').textContent = description;
+            document.getElementById('infoModalMeta').textContent = meta;
+            const infoModal = new bootstrap.Modal(document.getElementById('infoModal'));
+            infoModal.show();
+        }
+    </script>
+</body>
+</html>
