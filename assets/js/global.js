@@ -325,13 +325,12 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
   }
 }
 
-// ORGANIZATION SECTION — 20-PHOTO FOLDER GALLERY & INLINE ZOOM
+// ORGANIZATION SECTION
 (function initOrgBigFolder() {
   const orgPhotos = Array.from({ length: 20 }, (_, i) => {
     const num = i + 1;
     return {
       src: `assets/img/org-${num}.jpeg`,
-      caption: `Dokumentasi Organisasi — Foto ${num} dari 20`,
     };
   });
 
