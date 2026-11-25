@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const roles = [
     "Staf IT",
     "Web Developer",
-    "Mobile Developer",
+    "Backend Developer",
     "Fullstack Developer",
+    "Mobile Developer",
   ];
 
   const prefersReducedMotion = window.matchMedia(
