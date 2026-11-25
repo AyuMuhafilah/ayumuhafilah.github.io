@@ -512,20 +512,167 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
   const indicatorsEl = document.getElementById("certCarouselIndicators");
   if (!carouselEl || !indicatorsEl) return;
 
-  const items = carouselEl.querySelectorAll(".carousel-item");
-  indicatorsEl.innerHTML = "";
+  const allItems = Array.from(carouselEl.querySelectorAll(".carousel-item"));
+  const prevBtn = carouselEl.querySelector(".carousel-control-prev");
+  const nextBtn = carouselEl.querySelector(".carousel-control-next");
 
-  items.forEach((_, idx) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.setAttribute("data-bs-target", "#certCarousel");
-    btn.setAttribute("data-bs-slide-to", String(idx));
-    btn.setAttribute("aria-label", `Halaman sertifikat ${idx + 1}`);
-    if (idx === 0) {
-      btn.classList.add("active");
-      btn.setAttribute("aria-current", "true");
+  function isDesktopViewport() {
+    return window.matchMedia("(min-width: 992px)").matches;
+  }
+
+  function getGroupItems() {
+    const group = isDesktopViewport() ? "desktop" : "mobile";
+    const matched = allItems.filter((el) => el.dataset.certGroup === group);
+    return matched.length ? matched : allItems;
+  }
+
+  function getCarouselInstance() {
+    if (!window.bootstrap || !bootstrap.Carousel) return null;
+    return bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+      ride: false,
+      interval: false,
+    });
+  }
+
+  function updateActiveIndicator(activeLocalIdx) {
+    const buttons = indicatorsEl.querySelectorAll("button");
+    buttons.forEach((btn, idx) => {
+      const isCurrent = idx === activeLocalIdx;
+      btn.classList.toggle("active", isCurrent);
+      if (isCurrent) {
+        btn.setAttribute("aria-current", "true");
+      } else {
+        btn.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function setSlideImmediate(targetItem) {
+    const instance = getCarouselInstance();
+    if (instance && typeof instance.pause === "function") {
+      instance.pause();
     }
-    indicatorsEl.appendChild(btn);
+
+    allItems.forEach((el) => {
+      el.classList.remove(
+        "active",
+        "carousel-item-next",
+        "carousel-item-prev",
+        "carousel-item-start",
+        "carousel-item-end",
+      );
+    });
+
+    if (targetItem) {
+      targetItem.classList.add("active");
+    }
+  }
+
+  function goToGroupIndex(targetLocalIdx, immediate = false) {
+    const groupItems = getGroupItems();
+    if (!groupItems.length) return;
+
+    const total = groupItems.length;
+    const wrappedIdx = ((targetLocalIdx % total) + total) % total;
+    const targetItem = groupItems[wrappedIdx];
+    const globalIdx = allItems.indexOf(targetItem);
+    if (globalIdx < 0) return;
+
+    if (immediate) {
+      setSlideImmediate(targetItem);
+      updateActiveIndicator(wrappedIdx);
+      return;
+    }
+
+    const instance = getCarouselInstance();
+    if (instance) {
+      instance.to(globalIdx);
+    } else {
+      setSlideImmediate(targetItem);
+      updateActiveIndicator(wrappedIdx);
+    }
+  }
+
+  function rebuildIndicators(forceFirst = false) {
+    const groupItems = getGroupItems();
+    let activeEl = carouselEl.querySelector(".carousel-item.active");
+
+    if (forceFirst || !activeEl || !groupItems.includes(activeEl)) {
+      goToGroupIndex(0, true);
+      activeEl = groupItems[0];
+    }
+
+    const activeLocalIdx = Math.max(0, groupItems.indexOf(activeEl));
+    indicatorsEl.innerHTML = "";
+
+    groupItems.forEach((_, localIdx) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.setAttribute("aria-label", `Halaman sertifikat ${localIdx + 1}`);
+
+      if (localIdx === activeLocalIdx) {
+        btn.classList.add("active");
+        btn.setAttribute("aria-current", "true");
+      }
+
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        goToGroupIndex(localIdx, false);
+      });
+
+      indicatorsEl.appendChild(btn);
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const groupItems = getGroupItems();
+      const activeEl = carouselEl.querySelector(".carousel-item.active");
+      const currentIdx = Math.max(0, groupItems.indexOf(activeEl));
+      goToGroupIndex(currentIdx - 1, false);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const groupItems = getGroupItems();
+      const activeEl = carouselEl.querySelector(".carousel-item.active");
+      const currentIdx = Math.max(0, groupItems.indexOf(activeEl));
+      goToGroupIndex(currentIdx + 1, false);
+    });
+  }
+
+  carouselEl.addEventListener("slid.bs.carousel", function () {
+    const groupItems = getGroupItems();
+    const activeEl = carouselEl.querySelector(".carousel-item.active");
+    const activeLocalIdx = groupItems.indexOf(activeEl);
+
+    if (activeLocalIdx === -1) {
+      goToGroupIndex(0, true);
+      return;
+    }
+
+    updateActiveIndicator(activeLocalIdx);
+  });
+
+  let lastIsDesktop = isDesktopViewport();
+  rebuildIndicators(true);
+
+  let resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      const nowDesktop = isDesktopViewport();
+      if (nowDesktop !== lastIsDesktop) {
+        lastIsDesktop = nowDesktop;
+        rebuildIndicators(true);
+      }
+    }, 150);
   });
 })();
 
@@ -633,7 +780,9 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
     applyTransform(1);
   }
 
-  certResetZoomFn = resetZoom;
+  if (typeof certResetZoomFn !== "undefined") {
+    certResetZoomFn = resetZoom;
+  }
 
   stageEl.addEventListener("pointerdown", function (e) {
     if (e.button !== 0 && e.pointerType === "mouse") return;
