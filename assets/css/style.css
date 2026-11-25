@@ -589,7 +589,7 @@ section[id] > .container {
     min-height: 100vh !important;
     max-height: none !important;
     overflow: visible !important;
-    padding: calc(var(--nav-height, 62px) + 14px) 12px 18px !important;
+    padding: 12px 12px 18px !important;
   }
 
   .hero-section .hero-card {
@@ -2437,7 +2437,7 @@ section[id] > .container {
 
 @media (max-width: 575.98px) {
   .hero-section.full-screen-section {
-    padding: calc(var(--nav-height, 62px) + 10px) 8px 14px !important;
+    padding: 8px 8px 14px !important;
   }
 
   .hero-section .hero-card {
