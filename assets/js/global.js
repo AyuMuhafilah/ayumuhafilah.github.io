@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tick();
 });
 
-// GLOBAL THEME SWITCHER (LIGHT / DARK MODE)
+// THEME
 const htmlEl = document.documentElement;
 const themeToggleBtn = document.getElementById("themeToggle");
 const themeIcon = document.getElementById("themeIcon");
@@ -88,7 +88,7 @@ if (themeToggleBtn) {
   });
 }
 
-// SHARED MODALS (ZOOM & INFO)
+// MODALS
 let certResetZoomFn = null;
 
 function openZoomModal(imgSrc, title) {
@@ -136,7 +136,7 @@ function openInfoModal(title, description, meta) {
   }
 }
 
-// NAVBAR, ACTIVE LINK & SCROLL TO TOP
+// NAVBAR
 const navLinks = document.querySelectorAll('.navbar .nav-link[href^="#"]');
 const sections = Array.from(navLinks)
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -196,7 +196,7 @@ setActiveNavLink();
   toggleScrollBtn();
 })();
 
-// ABOUT SECTION
+// ABOUT
 (() => {
   const aboutSection = document.getElementById("about");
   if (!aboutSection) return;
@@ -212,7 +212,7 @@ setActiveNavLink();
   });
 })();
 
-// PROJECTS SECTION
+// PROJECTS
 (function initProjectsCoverflow() {
   const track = document.getElementById("projectCoverflowTrack");
   const dotsWrap = document.getElementById("coverflowDots");
@@ -325,7 +325,7 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
   }
 }
 
-// ORGANIZATION SECTION
+// ORGANIZATION
 (function initOrgBigFolder() {
   const orgPhotos = Array.from({ length: 20 }, (_, i) => {
     const num = i + 1;
@@ -437,7 +437,6 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
     renderPhoto();
   };
 
-  // Zoom langsung di dalam stage galeri organisasi (tanpa buka modal lain)
   window.zoomCurrentOrgPhoto = function () {
     if (didDrag) {
       didDrag = false;
@@ -506,7 +505,7 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
   }
 })();
 
-// CERTIFICATES SECTION
+// CERTIFICATES
 (function initCertCarouselIndicators() {
   const carouselEl = document.getElementById("certCarousel");
   const indicatorsEl = document.getElementById("certCarouselIndicators");
@@ -885,51 +884,3 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
     }
   });
 })();
-
-// LOCATION SECTION
-document.addEventListener("DOMContentLoaded", function () {
-  const mapEl = document.getElementById("indonesiaLeafletMap");
-  if (!mapEl || typeof L === "undefined") return;
-
-  const kuninganCoords = [-6.9222883, 108.4798283];
-
-  const map = L.map("indonesiaLeafletMap", {
-    center: [-2.2, 118.5],
-    zoom: 4,
-    minZoom: 3,
-    maxZoom: 14,
-    scrollWheelZoom: false,
-  });
-
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
-    maxZoom: 19,
-  }).addTo(map);
-
-  L.circle(kuninganCoords, {
-    color: "#2b7bbb",
-    weight: 1.5,
-    fillColor: "#2b7bbb",
-    fillOpacity: 0.2,
-    radius: 140000,
-  }).addTo(map);
-
-  const radarIcon = L.divIcon({
-    className: "leaflet-kuningan-pin",
-    html: `
-        <div class="id-leaflet-marker">
-          <span class="id-leaflet-ring"></span>
-          <span class="id-leaflet-dot"></span>
-          <span class="id-leaflet-label">Kuningan, Jawa Barat</span>
-        </div>
-      `,
-    iconSize: [155, 32],
-    iconAnchor: [12, 16],
-  });
-
-  L.marker(kuninganCoords, { icon: radarIcon }).addTo(map);
-
-  setTimeout(() => map.invalidateSize(), 150);
-  window.addEventListener("resize", () => map.invalidateSize());
-});

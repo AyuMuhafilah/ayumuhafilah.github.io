@@ -284,7 +284,7 @@ section[id] > .container {
   right: 24px;
 }
 
-/* NAVBAR SECTION */
+/* NAVBAR */
 .navbar {
   min-height: var(--nav-height);
   background: var(--bg-navbar);
@@ -340,7 +340,7 @@ section[id] > .container {
   border-color: var(--accent-blue);
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero-title {
   font-size: clamp(1.7rem, 3vw, 2.65rem);
   font-weight: 800;
@@ -589,12 +589,12 @@ section[id] > .container {
     min-height: 100vh !important;
     max-height: none !important;
     overflow: visible !important;
-    padding: 12px 12px 18px !important;
+    padding: 14px 16px 20px !important;
   }
 
   .hero-section .hero-card {
     border-radius: 18px;
-    padding: 1.5rem 1.1rem !important;
+    padding: 1.5rem 1.35rem !important;
   }
 
   .hero-code-watermark,
@@ -774,7 +774,7 @@ section[id] > .container {
   }
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about-section-clean {
   position: relative;
 }
@@ -813,7 +813,56 @@ section[id] > .container {
   border-left-color: #ffffff;
 }
 
-/* EDUCATION SECTION */
+@media (max-width: 767.98px) {
+  #about .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .about-main-heading {
+    font-size: 1.45rem;
+  }
+
+  .about-lead-paragraph {
+    font-size: 0.7rem;
+    line-height: 1.46;
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .about-quote-line {
+    font-size: 0.68rem;
+    line-height: 1.44;
+    padding-left: 0.65rem;
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  #about .soft-card.p-4 {
+    padding: 14px 16px !important;
+  }
+
+  #about .soft-card.p-3 {
+    padding: 11px 13px !important;
+  }
+
+  #about .about-side-panel h6 {
+    font-size: 0.76rem;
+  }
+
+  #about .about-side-panel p.small {
+    font-size: 0.68rem;
+    line-height: 1.38;
+  }
+
+  #about .font-mono.small {
+    font-size: 0.68rem !important;
+  }
+}
+
+/* EDUCATION */
 .edu-card {
   border-radius: 18px;
 }
@@ -883,7 +932,67 @@ section[id] > .container {
   border-color: #ffffff;
 }
 
-/* EXPERIENCE SECTION */
+@media (max-width: 767.98px) {
+  #education .container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  #education .edu-banner-wrapper {
+    height: 135px;
+  }
+
+  #education .edu-banner-badges {
+    top: 10px;
+  }
+
+  #education .edu-banner-badges .badge,
+  #education .edu-year-badge {
+    font-size: 0.65rem !important;
+    padding: 4px 8px !important;
+  }
+
+  #education .edu-card .card-body,
+  #education .edu-card .p-4 {
+    padding: 15px 16px !important;
+  }
+
+  #education .edu-card h4,
+  #education .edu-card h5 {
+    font-size: 1rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  #education .edu-card .text-primary,
+  #education .edu-card .fw-semibold {
+    font-size: 0.78rem !important;
+  }
+
+  #education .edu-card .badge.bg-success,
+  #education .edu-card .font-mono {
+    font-size: 0.68rem !important;
+  }
+
+  #education .edu-thesis-box {
+    padding: 11px 13px !important;
+    border-radius: 12px;
+  }
+
+  #education .edu-thesis-box .small,
+  #education .edu-thesis-box .text-muted {
+    font-size: 0.68rem !important;
+    line-height: 1.42 !important;
+  }
+
+  #education .edu-thesis-box strong,
+  #education .edu-thesis-box .fw-bold {
+    font-size: 0.74rem !important;
+    line-height: 1.38 !important;
+    display: block;
+  }
+}
+
+/* EXPERIENCE */
 .exp-card {
   border-radius: 18px;
 }
@@ -957,7 +1066,60 @@ section[id] > .container {
   border-color: #ffffff;
 }
 
-/* PROJECTS SECTION */
+@media (max-width: 767.98px) {
+  #experience .container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  #experience .exp-gallery-grid {
+    height: 125px;
+  }
+
+  #experience .exp-period-badge {
+    top: 8px;
+    left: 8px;
+    padding: 0.25rem 0.55rem;
+    font-size: 0.64rem !important;
+  }
+
+  #experience .exp-card .card-body,
+  #experience .exp-card .p-4 {
+    padding: 15px 16px !important;
+  }
+
+  #experience .exp-card h4,
+  #experience .exp-card h5 {
+    font-size: 0.98rem !important;
+    margin-bottom: 3px !important;
+  }
+
+  #experience .exp-card .text-muted,
+  #experience .exp-card .small {
+    font-size: 0.7rem !important;
+  }
+
+  #experience .exp-product-chip {
+    font-size: 0.62rem;
+    padding: 2px 6px;
+    border-radius: 5px;
+  }
+
+  #experience .exp-bullet-list {
+    padding-left: 1rem;
+  }
+
+  #experience .exp-bullet-list li {
+    font-size: 0.7rem;
+    line-height: 1.44;
+    margin-bottom: 0.35rem;
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+}
+
+/* PROJECTS */
 #projects .coverflow-stage {
   position: relative;
   max-width: 1180px;
@@ -1199,10 +1361,15 @@ section[id] > .container {
 }
 
 @media (max-width: 767.98px) {
+  #projects .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
   #projects .coverflow-stage {
     position: relative;
     max-width: 100%;
-    padding: 6px 38px 4px;
+    padding: 6px 40px 4px;
     overflow: hidden;
   }
 
@@ -1240,7 +1407,7 @@ section[id] > .container {
   }
 
   #projects .coverflow-card-body {
-    padding: 12px 14px 14px;
+    padding: 13px 15px 15px;
   }
 
   #projects .coverflow-card-body p,
@@ -1276,7 +1443,7 @@ section[id] > .container {
   }
 }
 
-/* SKILLS SECTION */
+/* SKILLS */
 .skill-tag {
   background-color: var(--bg-primary);
   border: 1px solid var(--border-soft);
@@ -1299,8 +1466,17 @@ section[id] > .container {
 }
 
 @media (max-width: 767.98px) {
+  #skills .container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
   #skills .soft-card.p-4 {
-    padding: 14px !important;
+    padding: 15px 16px !important;
+  }
+
+  #skills .soft-card.p-3 {
+    padding: 12px 14px !important;
   }
 
   #skills .soft-card .mb-3 {
@@ -1337,7 +1513,7 @@ section[id] > .container {
   }
 }
 
-/* ORGANIZATION SECTION */
+/* ORGANIZATION */
 #organization .org-single-card {
   width: 100%;
   border-radius: 24px;
@@ -1834,7 +2010,107 @@ section[id] > .container {
   border-color: rgba(255, 255, 255, 0.18);
 }
 
-/* CERTIFICATES SECTION */
+@media (max-width: 767.98px) {
+  #organization .container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  #organization .org-single-card {
+    border-radius: 18px;
+  }
+
+  #organization .org-single-card .card-body,
+  #organization .org-single-card .p-4 {
+    padding: 15px 16px !important;
+  }
+
+  #organization .org-block {
+    padding: 11px 14px;
+    border-radius: 12px;
+  }
+
+  #organization .org-block h4,
+  #organization .org-block h5,
+  #organization .org-block h6 {
+    font-size: 0.9rem !important;
+    line-height: 1.3;
+  }
+
+  #organization .org-year-tag,
+  #organization .hima-step-period {
+    font-size: 0.62rem;
+    padding: 2px 7px;
+  }
+
+  #organization .hima-step {
+    gap: 9px;
+  }
+
+  #organization .hima-step-marker {
+    width: 22px;
+  }
+
+  #organization .hima-step-dot {
+    width: 22px;
+    height: 22px;
+    font-size: 0.62rem;
+  }
+
+  #organization .hima-step-content {
+    padding-bottom: 8px;
+  }
+
+  #organization .hima-step-role {
+    font-size: 0.74rem;
+  }
+
+  #organization .org-text {
+    font-size: 0.68rem;
+    line-height: 1.44;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  #organization .org-ppk-inline {
+    margin-top: 8px;
+    padding: 9px 12px;
+    border-radius: 10px;
+  }
+
+  #organization .org-ppk-label {
+    font-size: 0.6rem;
+  }
+
+  #organization .org-ppk-heading {
+    font-size: 0.66rem;
+    line-height: 1.35;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  #organization .org-ppk-sub {
+    font-size: 0.66rem;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  #organization .org-viewer-stage {
+    height: 230px;
+  }
+
+  #organization .org-viewer-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+}
+
+/* CERTIFICATES */
 #certificates .cert-card {
   background-color: var(--bg-card, #ffffff);
   border: 1px solid var(--border-soft, #e2e8f0);
@@ -1892,7 +2168,6 @@ section[id] > .container {
   overflow: hidden;
 }
 
-/* Sembunyikan item grup mobile saat di desktop & sebaliknya tanpa bentrok dengan .carousel-item */
 @media (min-width: 992px) {
   #certificates .carousel-item[data-cert-group="mobile"] {
     display: none !important;
@@ -1992,8 +2267,13 @@ section[id] > .container {
 }
 
 @media (max-width: 767.98px) {
+  #certificates .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
   #certificates .cert-carousel-wrap {
-    padding: 0 26px;
+    padding: 0 28px;
   }
 
   #certificates .cert-nav-btn {
@@ -2003,11 +2283,11 @@ section[id] > .container {
   }
 
   #certificates .carousel-control-prev.cert-nav-btn {
-    left: -10px !important;
+    left: -8px !important;
   }
 
   #certificates .carousel-control-next.cert-nav-btn {
-    right: -10px !important;
+    right: -8px !important;
   }
 }
 
@@ -2125,202 +2405,6 @@ section[id] > .container {
 [data-theme="dark"] #certificates .carousel-indicators.cert-indicators .active {
   background-color: #38bdf8;
   border-color: #38bdf8;
-}
-
-/* LOCATION SECTION */
-#location .location-full-card {
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-#location .location-full-stage {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--border-soft);
-  background-color: var(--bg-primary);
-}
-
-#indonesiaLeafletMap {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-#indonesiaLeafletMap .leaflet-tile-pane {
-  filter: saturate(0.65) contrast(0.95) brightness(1.03);
-}
-
-#location .location-top-badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 400;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--heading-color);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-}
-
-#location .location-floating-card {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 450;
-  width: 340px;
-  max-width: calc(100% - 32px);
-  padding: 16px 18px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
-}
-
-#location .location-gmaps-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-decoration: none;
-  background-color: var(--bg-primary);
-  color: var(--heading-color);
-  border: 1px solid var(--border-soft);
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-#location .location-gmaps-link:hover {
-  border-color: var(--primary, #2b7bbb);
-  color: var(--primary, #2b7bbb);
-}
-
-#location .location-work-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 10px;
-  font-size: 0.76rem;
-  font-weight: 600;
-  background-color: var(--accent-light);
-  color: var(--heading-color);
-  border: 1px solid var(--border-soft);
-}
-
-.leaflet-kuningan-pin {
-  background: transparent;
-  border: 0;
-}
-
-.id-leaflet-marker {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.id-leaflet-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #ef4444;
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
-  position: relative;
-  z-index: 2;
-}
-
-.id-leaflet-ring {
-  position: absolute;
-  left: -6px;
-  top: -6px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 2px solid #ef4444;
-  animation: leafletPinPulse 2s ease-out infinite;
-  pointer-events: none;
-}
-
-.id-leaflet-label {
-  background: #1a4b75;
-  color: #ffffff;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 8px;
-  white-space: nowrap;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.22);
-}
-
-@keyframes leafletPinPulse {
-  0% {
-    transform: scale(0.5);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(2.1);
-    opacity: 0;
-  }
-}
-
-@media (max-width: 991.98px) {
-  #location .location-full-stage {
-    height: 440px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #location .location-full-stage {
-    height: auto;
-    overflow: visible;
-    border: 0;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  #indonesiaLeafletMap {
-    height: 310px;
-    border-radius: 14px;
-    border: 1px solid var(--border-soft);
-  }
-
-  #location .location-floating-card {
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    backdrop-filter: none;
-    box-shadow: none;
-  }
-}
-
-[data-theme="dark"] #indonesiaLeafletMap .leaflet-tile-pane {
-  filter: brightness(0.78) contrast(1.08) invert(0.92) hue-rotate(180deg);
-}
-
-[data-theme="dark"] #location .location-top-badge,
-[data-theme="dark"] #location .location-floating-card {
-  background: rgba(15, 25, 41, 0.92);
-}
-
-[data-theme="dark"] .id-leaflet-label {
-  background: #0f1929;
-  border-color: rgba(255, 255, 255, 0.45);
 }
 
 /* MODALS */
@@ -2468,9 +2552,7 @@ section[id] > .container {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
 
-/* 
-   FOOTER SECTION
-    */
+/* FOOTER */
 .portfolio-footer {
   border-top: 1px solid var(--border-soft);
   background-color: var(--bg-primary);
@@ -2521,7 +2603,7 @@ section[id] > .container {
   }
 
   #certificates .cert-carousel-wrap {
-    padding: 0 26px;
+    padding: 0 28px;
   }
 
   #certificates .cert-nav-btn {
@@ -2530,11 +2612,11 @@ section[id] > .container {
   }
 
   #certificates .carousel-control-prev.cert-nav-btn {
-    left: -10px !important;
+    left: -8px !important;
   }
 
   #certificates .carousel-control-next.cert-nav-btn {
-    right: -10px !important;
+    right: -8px !important;
   }
 
   #organization .org-viewer-stage {
@@ -2555,11 +2637,11 @@ section[id] > .container {
 
 @media (max-width: 575.98px) {
   .hero-section.full-screen-section {
-    padding: 8px 8px 14px !important;
+    padding: 12px 14px 18px !important;
   }
 
   .hero-section .hero-card {
-    padding: 1.25rem 0.9rem !important;
+    padding: 1.35rem 1.15rem !important;
   }
 
   .hero-photo-wrapper {
@@ -2592,7 +2674,7 @@ section[id] > .container {
   }
 
   #organization .org-block {
-    padding: 10px 12px;
+    padding: 11px 14px;
   }
 
   #organization .org-folder-back {
@@ -2613,7 +2695,7 @@ section[id] > .container {
   }
 
   #location .location-floating-card {
-    padding: 14px;
+    padding: 15px 16px;
     border-radius: 14px;
   }
 
