@@ -239,6 +239,13 @@ h6 {
   opacity: 0.45;
 }
 
+@media (max-width: 767.98px) {
+  .hero-dots,
+  .section-dots {
+    display: none !important;
+  }
+}
+
 .hero-dots-top-left {
   top: 22px;
   left: 26px;
@@ -584,22 +591,27 @@ section[id] > .container {
 }
 
 @media (max-width: 991.98px) {
-  .hero-section.full-screen-section {
+  .hero-section .hero-title {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .hero-role-wrapper {
+    min-height: 24px !important;
     height: auto !important;
-    min-height: 100vh !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 14px 16px 20px !important;
+    padding: 0 6px 0 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.35rem !important;
+    line-height: 1.15 !important;
+    gap: 5px;
   }
 
-  .hero-section .hero-card {
-    border-radius: 18px;
-    padding: 1.5rem 1.35rem !important;
+  .hero-role-wrapper + * {
+    margin-top: 0.25rem !important;
   }
 
-  .hero-code-watermark,
-  .hero-status-chip {
-    display: none;
+  .hero-role-text {
+    font-size: 0.95rem !important;
+    line-height: 1.15 !important;
   }
 }
 
