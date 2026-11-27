@@ -241,7 +241,8 @@ h6 {
 
 @media (max-width: 767.98px) {
   .hero-dots,
-  .section-dots {
+  .section-dots,
+  .hero-ring {
     display: none !important;
   }
 }
@@ -591,6 +592,16 @@ section[id] > .container {
 }
 
 @media (max-width: 991.98px) {
+  .hero-section .hero-card {
+    align-items: flex-start !important;
+    padding-top: 1rem !important;
+  }
+
+  .hero-section .hero-card .row > [class*="col-"]:first-child > :first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
   .hero-section .hero-title {
     margin-bottom: 0.25rem !important;
   }
@@ -2649,11 +2660,11 @@ section[id] > .container {
 
 @media (max-width: 575.98px) {
   .hero-section.full-screen-section {
-    padding: 12px 14px 18px !important;
+    padding: 10px 14px 16px !important;
   }
 
   .hero-section .hero-card {
-    padding: 1.35rem 1.15rem !important;
+    padding: 0.9rem 1.1rem 1.25rem !important;
   }
 
   .hero-photo-wrapper {
@@ -2690,16 +2701,21 @@ section[id] > .container {
   }
 
   #organization .org-folder-back {
-    height: 290px;
+    height: 205px;
   }
 
   #organization .org-folder-pocket {
-    height: 185px;
+    height: 132px;
+  }
+
+  #organization .org-inserted-photos {
+    top: -22px;
+    height: 105px;
   }
 
   #organization .org-photo-slip {
-    width: 74px;
-    height: 76px;
+    width: 62px;
+    height: 62px;
   }
 
   #indonesiaLeafletMap {
