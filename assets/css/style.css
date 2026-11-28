@@ -43,7 +43,6 @@
   --frame-mat: #152238;
 }
 
-/* Transisi serentak saat ganti tema */
 html.theme-transitioning,
 html.theme-transitioning *,
 html.theme-transitioning *::before,
@@ -1172,6 +1171,7 @@ section[id] > .container {
 .exp-bullet-list li {
   margin-bottom: 0.45rem;
   line-height: 1.52;
+  text-align: justify;
 }
 
 .exp-bullet-list li:last-child {
@@ -1253,7 +1253,7 @@ section[id] > .container {
 
 #projects .coverflow-track {
   position: relative;
-  height: 430px;
+  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1379,6 +1379,7 @@ section[id] > .container {
   color: #2b7bbb !important;
   border: 1px solid rgba(43, 123, 187, 0.35) !important;
   font-weight: 600;
+  font-size: 0.76rem;
   opacity: 1 !important;
   visibility: visible !important;
   display: inline-flex !important;
@@ -1499,7 +1500,7 @@ section[id] > .container {
   #projects .coverflow-track {
     position: relative;
     height: auto;
-    min-height: 260px;
+    min-height: 285px;
     display: block;
     overflow: hidden;
   }
@@ -1533,9 +1534,7 @@ section[id] > .container {
     padding: 13px 15px 15px;
   }
 
-  #projects .coverflow-card-body p,
-  #projects .coverflow-card-body .skill-tag,
-  #projects .coverflow-card-body .d-flex.flex-wrap {
+  #projects .coverflow-card-body p {
     display: none !important;
   }
 
@@ -2315,6 +2314,18 @@ section[id] > .container {
   transform: scale(1.04);
 }
 
+#certificates .cert-caption {
+  padding: 8px 6px 2px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #certificates .cert-carousel-wrap {
   position: relative;
   padding: 0 36px;
@@ -2435,6 +2446,10 @@ section[id] > .container {
 
   #certificates .cert-carousel-wrap {
     padding: 0 28px;
+  }
+
+  #certificates .cert-caption {
+    font-size: 0.72rem;
   }
 
   #certificates .cert-nav-btn {
@@ -2750,7 +2765,6 @@ section[id] > .container {
   }
 }
 
-/* Optimasi performa load & scroll gambar di layar HP */
 @media (max-width: 767.98px) {
   .navbar {
     backdrop-filter: blur(6px);

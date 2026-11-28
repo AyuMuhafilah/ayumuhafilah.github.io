@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!target) return;
 
   const roles = [
-    "Staf IT",
     "Web Developer",
     "Backend Developer",
     "Fullstack Developer",
+    "Staf IT",
     "Mobile Developer",
   ];
 
@@ -90,6 +90,7 @@ if (themeToggleBtn) {
 
 // MODALS
 let certResetZoomFn = null;
+let reopenOrgGalleryOnZoomClose = false;
 
 function openZoomModal(imgSrc, title) {
   const certImg = document.getElementById("certZoomModalImg");
@@ -331,6 +332,7 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
     const num = i + 1;
     return {
       src: `assets/img/org-${num}.jpeg`,
+      caption: `Dokumentasi Kegiatan Organisasi #${num}`,
     };
   });
 
@@ -872,10 +874,7 @@ function zoomActiveProjectSlide(carouselId, fallbackTitle) {
   modalEl.addEventListener("hidden.bs.modal", function () {
     resetZoom();
 
-    if (
-      typeof reopenOrgGalleryOnZoomClose !== "undefined" &&
-      reopenOrgGalleryOnZoomClose
-    ) {
+    if (reopenOrgGalleryOnZoomClose) {
       reopenOrgGalleryOnZoomClose = false;
       const orgModalEl = document.getElementById("orgGalleryModal");
       if (orgModalEl && window.bootstrap && bootstrap.Modal) {
